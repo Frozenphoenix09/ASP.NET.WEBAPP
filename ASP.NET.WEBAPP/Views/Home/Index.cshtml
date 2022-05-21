@@ -1,0 +1,28 @@
+﻿@model List<ASP.NET.WEBAPP.Entities.User>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <td>Id</td>
+            <td>User Name</td>
+            <td>Email</td>
+            <td>Password</td>
+        </tr>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.Password</td>
+            </tr>
+        }
+    </table>
+</div>
